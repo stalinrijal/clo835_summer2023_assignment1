@@ -3,11 +3,12 @@ name: Build, Push to ECR, and Deploy MySQL and Web App to EC2
 on:
   push:
     branches:
-      - main  # Adjust if you're using a different branch
+      - main  
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment: dev  
 
     steps:
       # Step 1: Checkout the repository code
